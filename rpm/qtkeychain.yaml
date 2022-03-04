@@ -1,0 +1,53 @@
+Name: qtkeychain
+Summary: Nextcloud command line tool
+Version: 0.13.2
+Release: 0
+Group: Applications
+License: BSD 3-clause
+SCM: "https://github.com/frankosterfeld/qtkeychain"
+URL: "https://github.com/frankosterfeld/qtkeychain"
+Sources:
+    - '%{name}-%{version}.tar.gz'
+Description: |
+
+
+    %if "%{?vendor}" == "chum"
+    PackageName: qtkeychain
+    PackagerName: nephros
+    Categories:
+     - Library
+    %endif
+SetupOptions: -q -n %{name}-%{version}/upstream
+#Macros:
+#  - 'foo;bar'
+#Patches:
+#  - 'baz'
+#Requires:
+PkgBR:
+  - pkgconfig
+  - qt5-qmake
+  - qt5-qttools-linguist
+  # librsvg-devel
+  # qt5-qtwebsockets-devel
+  # qt5keychain-devel
+PkgConfigBR:
+  - openssl
+  - zlib
+  - Qt5DBus
+  - Qt5Test
+
+
+Configure: cmake
+ConfigOptions:
+  - '-DBUILD_TEST_APPLICATION=0'
+  - '-DBUILD_TRANSLATIONS=0'
+  - '-DLIBSECRET_SUPPORT=0'
+
+Builder: make
+NoIconCache: true
+#BuildArch: noarch
+AutoSubPackages:
+  - devel
+Files:
+  - '%license COPYING'
+
