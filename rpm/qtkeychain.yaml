@@ -23,8 +23,8 @@ Description: |
 SetupOptions: -q -n %{name}-%{version}/upstream
 #Macros:
 #  - 'foo;bar'
-#Patches:
-#  - 'baz'
+Patches:
+  - 'cmake-version.patch'
 #Requires:
 PkgBR:
   - pkgconfig

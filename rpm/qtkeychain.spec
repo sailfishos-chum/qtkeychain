@@ -16,6 +16,7 @@ License:    BSD-3-clause
 URL:        https://github.com/frankosterfeld/qtkeychain
 Source0:    %{name}-%{version}.tar.gz
 Source100:  qtkeychain.yaml
+Patch0:     cmake-version.patch
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(openssl)
@@ -52,6 +53,8 @@ Development files for %{name}.
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
+# cmake-version.patch
+%patch0 -p1
 # >> setup
 # << setup
 
