@@ -25,6 +25,7 @@ SetupOptions: -q -n %{name}-%{version}/upstream
 #Requires:
 PkgBR:
   - pkgconfig
+  - cmake
   - qt5-qmake
   - qt5-qttools-linguist
   # librsvg-devel

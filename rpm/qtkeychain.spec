@@ -16,11 +16,14 @@ License:    BSD 3-clause
 URL:        https://github.com/frankosterfeld/qtkeychain
 Source0:    %{name}-%{version}.tar.gz
 Source100:  qtkeychain.yaml
+Requires(post): /sbin/ldconfig
+Requires(postun): /sbin/ldconfig
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  pkgconfig
+BuildRequires:  cmake
 BuildRequires:  qt5-qmake
 BuildRequires:  qt5-qttools-linguist
 
@@ -71,6 +74,10 @@ rm -rf %{buildroot}
 
 # >> install post
 # << install post
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(-,root,root,-)
