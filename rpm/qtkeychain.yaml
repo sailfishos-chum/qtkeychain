@@ -24,6 +24,7 @@ SetupOptions: -q -n %{name}-%{version}/upstream
 #Macros:
 #  - 'foo;bar'
 Patches:
+  # for older SFOS versions (3.x):
   - 'cmake-version.patch'
 #Requires:
 PkgBR:
