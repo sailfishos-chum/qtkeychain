@@ -8,11 +8,11 @@ Name:       qtkeychain
 # >> macros
 # << macros
 
-Summary:    Nextcloud command line tool
+Summary:    Qt API for storing passwords securely.
 Version:    0.13.2
 Release:    0
 Group:      Applications
-License:    BSD 3-clause
+License:    BSD-3-clause
 URL:        https://github.com/frankosterfeld/qtkeychain
 Source0:    %{name}-%{version}.tar.gz
 Source100:  qtkeychain.yaml
@@ -28,11 +28,14 @@ BuildRequires:  qt5-qmake
 BuildRequires:  qt5-qttools-linguist
 
 %description
-
+%{summary}.
 
 %if "%{?vendor}" == "chum"
 PackageName: qtkeychain
 PackagerName: nephros
+Custom:
+  Repo: https://github.com/frankosterfeld/qtkeychain
+  PackagingRepo: https://gitlab.com/nephros/qtkeychain
 Categories:
  - Library
 %endif
@@ -81,8 +84,8 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%license COPYING
 # >> files
+%license COPYING
 %{_libdir}/*.so.*
 # << files
 
