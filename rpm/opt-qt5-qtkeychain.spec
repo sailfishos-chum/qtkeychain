@@ -23,8 +23,6 @@ BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  pkgconfig
 BuildRequires:  cmake
-#BuildRequires:  opt-qt5-qmake
-#BuildRequires:  opt-qt5-qttools-linguist >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-devel >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-private-devel >= %{qt_version}
 
@@ -63,6 +61,7 @@ cd build
 
 export CMAKE_PREFIX_PATH=%{_opt_qt5_prefix}
 cmake ..  \
+    -DCMAKE_INSTALL_PREFIX=%{_opt_qt5_prefix} \
     -DBUILD_TEST_APPLICATION=0 \
     -DBUILD_TRANSLATIONS=0 \
     -DLIBSECRET_SUPPORT=0
