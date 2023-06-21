@@ -9,8 +9,14 @@ Group:      Applications
 License:    BSD-3-clause
 URL:        https://github.com/frankosterfeld/qtkeychain
 Source0:    %{name}-%{version}.tar.gz
+
+# filter qml provides
+%global __provides_exclude_from ^%{_opt_qt5_archdatadir}/qml/.*\\.so$
+%{?opt_qt5_default_filter}
+
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
+%{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(Qt5DBus)
@@ -21,6 +27,7 @@ BuildRequires:  cmake
 #BuildRequires:  opt-qt5-qttools-linguist >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-devel >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-private-devel >= %{qt_version}
+
 
 %description
 %{summary}.
@@ -55,7 +62,7 @@ mkdir -p build
 cd build
 
 export CMAKE_PREFIX_PATH=%{_opt_qt5_prefix}
-cmake .  \
+cmake ..  \
     -DBUILD_TEST_APPLICATION=0 \
     -DBUILD_TRANSLATIONS=0 \
     -DLIBSECRET_SUPPORT=0
