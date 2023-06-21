@@ -36,7 +36,7 @@ PackageName: qtkeychain
 PackagerName: nephros
 Custom:
   Repo: https://github.com/frankosterfeld/qtkeychain
-  PackagingRepo: https://gitlab.com/nephros/qtkeychain
+  PackagingRepo: https://github.com/sailfishos-chum/qtkeychain
 Categories:
  - Library
 %endif
