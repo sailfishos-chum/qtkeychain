@@ -17,8 +17,8 @@ BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Test)
 BuildRequires:  pkgconfig
 BuildRequires:  cmake
-BuildRequires:  opt-qt5-qmake
-BuildRequires:  opt-qt5-qttools-linguist >= %{qt_version}
+#BuildRequires:  opt-qt5-qmake
+#BuildRequires:  opt-qt5-qttools-linguist >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-devel >= %{qt_version}
 BuildRequires:  opt-qt5-qtbase-private-devel >= %{qt_version}
 
