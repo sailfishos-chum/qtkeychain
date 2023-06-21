@@ -6,7 +6,7 @@ Summary:    Qt API for storing passwords securely.
 Version:    0.13.2
 Release:    0
 Group:      Applications
-License:    BSD-3-clause
+License:    BSD-3-Clause
 URL:        https://github.com/frankosterfeld/qtkeychain
 Source0:    %{name}-%{version}.tar.gz
 
