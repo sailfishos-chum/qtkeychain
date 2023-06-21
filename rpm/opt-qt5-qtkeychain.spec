@@ -72,6 +72,7 @@ make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
+cd build
 %make_install
 
 
