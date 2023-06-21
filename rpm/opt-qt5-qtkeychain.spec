@@ -3,7 +3,7 @@ Name:       opt-qt5-qtkeychain
 %global qt_version 5.15.9
 
 Summary:    Qt API for storing passwords securely
-Version:    0.13.2
+Version:    0.14.1
 Release:    0
 Group:      Applications
 License:    BSD-3-Clause
