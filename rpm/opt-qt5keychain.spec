@@ -47,33 +47,26 @@ Development files for %{name}.
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
-# cmake-version.patch
-%patch0 -p1
-# >> setup
-# << setup
-
 %build
-# >> build pre
-# << build pre
+export QTDIR=%{_opt_qt5_prefix}
+touch .git
 
-%cmake .  \
+mkdir -p build
+cd build
+
+export CMAKE_PREFIX_PATH=%{_opt_qt5_prefix}
+cmake .  \
     -DBUILD_TEST_APPLICATION=0 \
     -DBUILD_TRANSLATIONS=0 \
     -DLIBSECRET_SUPPORT=0
 
 make %{?_smp_mflags}
 
-# >> build post
-# << build post
 
 %install
 rm -rf %{buildroot}
-# >> install pre
-# << install pre
 %make_install
 
-# >> install post
-# << install post
 
 %post -p /sbin/ldconfig
 
@@ -81,17 +74,12 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-# >> files
 %license COPYING
 %{_libdir}/*.so.*
-# << files
 
 %files devel
 %defattr(-,root,root,-)
-# >> files devel
 %{_libdir}/*.so
 %{_libdir}/cmake/*
 %{_includedir}/*
 %{_datadir}/qt5/*
-
-# << files devel
