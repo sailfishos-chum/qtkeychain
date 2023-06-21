@@ -82,11 +82,11 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %license COPYING
-%{_libdir}/*.so.*
+%{_opt_qt5_libdir}/*.so.*
 
 %files devel
 %defattr(-,root,root,-)
-%{_libdir}/*.so
-%{_libdir}/cmake/*
-%{_includedir}/*
-%{_datadir}/qt5/*
+%{_opt_qt5_libdir}/*.so
+%{_opt_qt5_libdir}/cmake/*
+%{_opt_qt5_includedir}/*
+%{_opt_qt5_archdatadir}/*
