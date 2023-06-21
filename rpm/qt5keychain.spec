@@ -9,7 +9,7 @@ Name:       qt5keychain
 # << macros
 
 Summary:    Qt API for storing passwords securely.
-Version:    0.13.2
+Version:    0.14.1
 Release:    0
 Group:      Applications
 License:    BSD-3-clause
