@@ -23,6 +23,7 @@ BuildRequires:  pkgconfig(openssl)
 BuildRequires:  pkgconfig(zlib)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Test)
+BuildRequires:  pkgconfig(sailfishsecrets)
 BuildRequires:  pkgconfig
 BuildRequires:  cmake
 BuildRequires:  qt5-qmake

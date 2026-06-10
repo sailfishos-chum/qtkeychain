@@ -40,6 +40,7 @@ PkgConfigBR:
   - zlib
   - Qt5DBus
   - Qt5Test
+  - sailfishsecrets
 
 
 Configure: cmake
