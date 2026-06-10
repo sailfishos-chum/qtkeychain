@@ -44,9 +44,9 @@ PkgConfigBR:
 
 Configure: cmake
 ConfigOptions:
-  - '-DBUILD_TEST_APPLICATION=0'
-  - '-DBUILD_TRANSLATIONS=0'
-  - '-DLIBSECRET_SUPPORT=0'
+  - -DSAILFISHOS=ON
+  - -DBUILD_TEST_APPLICATION=OFF
+  - -DBUILD_TRANSLATIONS=ON
 
 Builder: make
 NoIconCache: true
