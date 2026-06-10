@@ -66,7 +66,7 @@ Development files for %{name}.
 %cmake .  \
     -DSAILFISHOS=ON \
     -DBUILD_TEST_APPLICATION=OFF \
-    -DBUILD_TRANSLATIONS=ON
+    -DBUILD_TRANSLATIONS=OFF
 
 %make_build
 
@@ -97,5 +97,4 @@ Development files for %{name}.
 %{_libdir}/cmake/*
 %{_includedir}/*
 %{_datadir}/qt5/*
-
 # << files devel
