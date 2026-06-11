@@ -47,7 +47,7 @@ Configure: cmake
 ConfigOptions:
   - -DSAILFISHOS=ON
   - -DBUILD_TEST_APPLICATION=OFF
-  - -DBUILD_TRANSLATIONS=OFF
+  - -DBUILD_TRANSLATIONS=ON
 
 Builder: make
 NoIconCache: true

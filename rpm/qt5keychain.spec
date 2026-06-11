@@ -66,7 +66,7 @@ Development files for %{name}.
 %cmake .  \
     -DSAILFISHOS=ON \
     -DBUILD_TEST_APPLICATION=OFF \
-    -DBUILD_TRANSLATIONS=OFF
+    -DBUILD_TRANSLATIONS=ON
 
 %make_build
 
