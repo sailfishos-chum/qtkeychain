@@ -8,7 +8,7 @@ Name:       qt5keychain
 # >> macros
 # << macros
 
-Summary:    Qt API for storing passwords securely.
+Summary:    Qt API for storing passwords securely
 Version:    0.14.3
 Release:    0
 Group:      Applications
